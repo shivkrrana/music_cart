@@ -20,6 +20,7 @@ public class Product {
     private String color;
     private String productType;
     private String brand;
+    @Lob
     private String description;
     private String image;
 
