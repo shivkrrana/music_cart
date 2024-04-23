@@ -68,8 +68,8 @@ public class PaymentService {
 //                    .setShippingAddressCollection(SessionCreateParams.ShippingAddressCollection.builder().addAllowedCountry(SessionCreateParams.ShippingAddressCollection.AllowedCountry.IN).build())
 //                    .setCustomerCreation(SessionCreateParams.CustomerUpdate.builder().setAddress())
                     .addShippingOption(SessionCreateParams.ShippingOption.builder().setShippingRateData(SessionCreateParams.ShippingOption.ShippingRateData.builder().setDisplayName("You will receive your order anywhere from 5-7 business days").setFixedAmount(SessionCreateParams.ShippingOption.ShippingRateData.FixedAmount.builder().setAmount(45L * 100).setCurrency("inr").build()).setType(SessionCreateParams.ShippingOption.ShippingRateData.Type.FIXED_AMOUNT).build()).build())
-                .setSuccessUrl("http://localhost:3000/success")
-                .setCancelUrl("http://localhost:3000/checkout")
+                .setSuccessUrl("https://shiv-musicart.netlify.app/success")
+                .setCancelUrl("https://shiv-musicart.netlify.app/checkout")
                 .addAllLineItem(allElements).build();
 
         Session session = Session.create(params);
